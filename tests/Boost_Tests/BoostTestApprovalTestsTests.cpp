@@ -1,4 +1,4 @@
-#include "main.cpp"
+#include "boost_test_main.cpp"
 
 //#define BOOST_TEST_INCLUDED
 //#include <boost/test/unit_test.hpp>

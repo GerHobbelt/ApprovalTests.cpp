@@ -60,7 +60,7 @@ namespace ApprovalTests
 }
 
 #ifndef APPROVALS_GOOGLETEST_EXISTING_MAIN
-int main(int argc, char** argv)
+int main(int argc, const char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
     ApprovalTests::initializeApprovalTestsForGoogleTests();

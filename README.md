@@ -2,9 +2,9 @@
 
 # <img src="doc/images/icon.png" height="30px"> Approval Tests for C++
 
-[![Actions Status](https://github.com/approvals/ApprovalTests.cpp/workflows/build/badge.svg?branch=master)](https://github.com/approvals/ApprovalTests.cpp/actions?query=branch%3Amaster+workflow%3Abuild)
-[![Build Status](https://github.com/approvals/ApprovalTests.cpp/workflows/cygwin/badge.svg?branch=master)](https://github.com/approvals/ApprovalTests.cpp/actions?query=branch%3Amaster+workflow%3Acygwin)
-[![Build Status](https://github.com/approvals/ApprovalTests.cpp/workflows/mingw/badge.svg?branch=master)](https://github.com/approvals/ApprovalTests.cpp/actions?query=branch%3Amaster+workflow%3Amingw)
+[![build](https://github.com/approvals/ApprovalTests.cpp/actions/workflows/github_actions_build.yml/badge.svg)](https://github.com/approvals/ApprovalTests.cpp/actions/workflows/github_actions_build.yml)
+[![cygwin](https://github.com/approvals/ApprovalTests.cpp/actions/workflows/cygwin.yml/badge.svg)](https://github.com/approvals/ApprovalTests.cpp/actions/workflows/cygwin.yml)
+[![mingw](https://github.com/approvals/ApprovalTests.cpp/actions/workflows/mingw.yml/badge.svg)](https://github.com/approvals/ApprovalTests.cpp/actions/workflows/mingw.yml)
 [![python-tests](https://github.com/approvals/ApprovalTests.cpp/actions/workflows/python-tests.yml/badge.svg)](https://github.com/approvals/ApprovalTests.cpp/actions/workflows/python-tests.yml)
 
 [![ConanCenter package](https://repology.org/badge/version-for-repo/conancenter/approvaltests.cpp.svg)](https://conan.io/center/approvaltests.cpp)
@@ -13,8 +13,8 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg)](/CODE_OF_CONDUCT.md#top)
 
-:arrow_down: <a href="https://github.com/approvals/ApprovalTests.cpp/releases/download/v.10.12.2/ApprovalTests.v.10.12.2.hpp">
-Download the latest version (v.10.12.2) of the **single header file** here.</a>
+:arrow_down: <a href="https://github.com/approvals/ApprovalTests.cpp/releases/download/v.10.13.0/ApprovalTests.v.10.13.0.hpp">
+Download the latest version (v.10.13.0) of the **single header file** here.</a>
 
 :book: [**Read the Docs**](https://approvaltestscpp.readthedocs.io/en/latest/)
 

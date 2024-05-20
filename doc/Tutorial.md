@@ -21,11 +21,11 @@ In this tutorial, we are going to use Windows, Catch2 and WinMerge. If you are u
 
 By the end of this tutorial, you should be able to use Approval Tests in most basic cases.
 
-To follow along at home, please [download the Starter Project](/doc/Setup.md#i-have-nothing) unless you already have a working ApprovalTests build / environment in which case you can just start a new test. 
+To follow along at home, please [download](https://github.com/approvals/ApprovalTests.cpp.StarterProject/archive/refs/heads/master.zip) the [Starter Project](https://github.com/approvals/ApprovalTests.cpp.StarterProject) unless you already have a working ApprovalTests build / environment in which case you can just start a new test. 
 
 ## Hello Approval Tests
 
-Let's open the Starter Project in your development environment, and open [Tutorial.cpp](https://github.com/approvals/ApprovalTests.cpp.StarterProject/blob/master/tests/Tutorial.cpp).
+Let's open the Starter Project in your development environment, and open [tests/Tutorial.cpp](https://github.com/approvals/ApprovalTests.cpp.StarterProject/blob/master/tests/Tutorial.cpp).
 
 ### Writing the Test 
 
@@ -48,7 +48,7 @@ When we run the test, WinMerge will open as such:
 
 ![New Failure](/doc/images/tutorial/01_new_failure.png?raw=true)
 
-On the left hand side, we will see the actual received result, `Hello Approvals`. It is what we want, so we are going to approve it. To do that, click the "All Right" button (or copy and paste the text to the other side)
+On the left hand side, we will see the actual received result, `Hello Approvals`. It is what we want, so we are going to approve it. To do that, click the "All Right" button (or copy and paste the text from the left => right side).
  
 ![Approving](/doc/images/tutorial/02_approving.png?raw=true)
 
@@ -73,7 +73,14 @@ However, if it does not match, another step is invoked, and a "[Reporter](/doc/R
 
 Please note that the first time you run an Approval Test, it will always fail and launch a reporter, as you have never said anything is OK.
 
+**Note**: For more information, see a [diagram of this workflow](https://github.com/approvals/ApprovalTests.Python/blob/main/docs/explanation/approval_testing.md#running-approvals).
+
 ### Approval Files
+
+The files we have just seen are the `.approved.txt` and `.received.txt` files, namely: 
+
+- `Tutorial.HelloApprovals.approved.txt`
+- `Tutorial.HelloApprovals.received.txt`
 
 Approvals creates a lot of `.approved.txt` and `.received.txt` files. The `.received.txt` files are automatically deleted on a passing test, and should never be checked in to source control. We suggest adding `*.received.*` line to your `.gitignore` file.
 
@@ -83,7 +90,7 @@ Approval Tests follows the [Convention over Configuration](/doc/Glossary.md#conv
 
 `FileName.TestName.approved.txt`
 
-So in this case, it will be:
+Which in our example here became:
 
 `Tutorial.HelloApprovals.approved.txt`
 

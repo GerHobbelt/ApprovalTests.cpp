@@ -2,11 +2,7 @@ name: build
 
 on:
   push:
-    branches:
-      - '*'
   pull_request:
-    branches:
-      - '*'
   schedule:
     - cron: '16 0 * * 3,6'  # <https://crontab.guru/#16_0_*_*_3,6> - "At 00:16 on Wednesday and Saturday."
 
@@ -21,6 +17,11 @@ jobs:
           exclude: './third_party'
           inplace: True
           clangFormatVersion: 9
+      - name: Run MarkdownSnippets
+        run: |
+          dotnet tool install --global MarkdownSnippets.Tool
+          ./run_markdown_templates.sh
+        shell: bash
       - uses: EndBug/add-and-commit@v9
         with:
           author_name: Clang GitHub Action

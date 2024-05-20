@@ -1,4 +1,4 @@
-name: cygwin
+name: cygwin-by-cygwin
 
 on:
   push:
@@ -21,25 +21,21 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Set up Cygwin
-        uses: egor-tensin/setup-cygwin@v4 # https://github.com/marketplace/actions/install-cygwin
+        uses: cygwin/cygwin-install-action@v4
         with:
-          platform: x64
           packages: cmake libboost-devel libtool gcc gcc-g++ binutils make
-          hardlinks: 1
 
       - name: Configure
         run: |
-          basic() {
-            pwd
-            cd /cygdrive/d/a/ApprovalTests.cpp/ApprovalTests.cpp
-            mkdir -p cmake-build
-            cd       cmake-build
-            # Debug gives Assembler messages: ... CMakeFiles/Catch2_Tests.dir/main.cpp.o: 'file too big'
-            cmake --version
-            cmake -G 'Unix Makefiles' .. -DCMAKE_BUILD_TYPE=Release -DAPPROVAL_TESTS_BUILD_DOCS=OFF -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
-          }
-          basic
-        shell: C:\tools\cygwin\bin\bash.exe --login --norc -eo pipefail -o igncr '{0}'
+          pwd
+          ls -ls
+          cd ApprovalTests.cpp
+          mkdir -p cmake-build
+          cd       cmake-build
+          # Debug gives Assembler messages: ... CMakeFiles/Catch2_Tests.dir/main.cpp.o: 'file too big'
+          cmake --version
+          cmake -G 'Unix Makefiles' .. -DCMAKE_BUILD_TYPE=Release -DAPPROVAL_TESTS_BUILD_DOCS=OFF -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
+        shell: C:\cygwin\bin\bash.exe '{0}'
 
       - name: Build
         run: |

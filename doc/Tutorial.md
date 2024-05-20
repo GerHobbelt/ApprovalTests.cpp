@@ -5,6 +5,7 @@
 <!-- toc -->
 ## Contents
 
+  * [Using this tutorial](#using-this-tutorial)
   * [Hello Approval Tests](#hello-approval-tests)
     * [Writing the Test](#writing-the-test)
     * [Approving the Test](#approving-the-test)
@@ -17,11 +18,15 @@
 
 The tutorial is written for someone with a decent understanding of C++, a passing understanding of traditional unit testing and of diff tools, and no experience with Approval Tests at all.
 
-In this tutorial, we are going to use Windows, Catch2 and WinMerge. If you are using something else, it will make almost no difference to your experience.
+In this tutorial, we are going to use Windows, Catch2v3, C++14 or above, and WinMerge. If you are using something else, it will make almost no difference to your experience.
 
 By the end of this tutorial, you should be able to use Approval Tests in most basic cases.
 
 To follow along at home, please [download](https://github.com/approvals/ApprovalTests.cpp.StarterProject/archive/refs/heads/master.zip) the [Starter Project](https://github.com/approvals/ApprovalTests.cpp.StarterProject) unless you already have a working ApprovalTests build / environment in which case you can just start a new test. 
+
+## Using this tutorial
+This tutorial uses markdown snippets. What this means is that all code samples have a link under them called `snippet source`.  
+If you get stuck, you can click these to see the code samples in the context of a full source file whenever needed.  
 
 ## Hello Approval Tests
 
@@ -73,7 +78,7 @@ However, if it does not match, another step is invoked, and a "[Reporter](/doc/R
 
 Please note that the first time you run an Approval Test, it will always fail and launch a reporter, as you have never said anything is OK.
 
-**Note**: For more information, see a [diagram of this workflow](https://github.com/approvals/ApprovalTests.Python/blob/main/docs/explanation/approval_testing.md#running-approvals).
+**Bonus Material:** For more information, see a [diagram of this workflow](https://github.com/approvals/ApprovalTests.Python/blob/main/docs/explanation/approval_testing.md#running-approvals).
 
 ### Approval Files
 
@@ -147,25 +152,30 @@ public:
 <sup><a href='/tests/DocTest_Tests/docs/Tutorial.cpp#L23-L50' title='Snippet source file'>snippet source</a> | <a href='#snippet-library_book' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
-What we would like to be able to write is:
+Let's write a new test for this `LibraryBook` class.
+
+What we would like to be able to do is write the following code:
 
 <!-- snippet: non_printable_object -->
 <a id='snippet-non_printable_object'></a>
 ```cpp
-LibraryBook harry_potter(
-    "Harry Potter and the Goblet of Fire", "J.K. Rowling",
-    30, "English", 752, "978-0439139595");
+TEST_CASE("WritableBooks")
+{
+    LibraryBook harry_potter(
+        "Harry Potter and the Goblet of Fire", "J.K. Rowling",
+        30, "English", 752, "978-0439139595");
 
-Approvals::verify(harry_potter); // This does not compile
+    Approvals::verify(harry_potter); // This does not compile
+}
 ```
-<sup><a href='/tests/DocTest_Tests/docs/Tutorial.cpp#L56-L62' title='Snippet source file'>snippet source</a> | <a href='#snippet-non_printable_object' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/tests/DocTest_Tests/docs/Tutorial.cpp#L54-L63' title='Snippet source file'>snippet source</a> | <a href='#snippet-non_printable_object' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 The problem is that this will not compile, because at present there is no way to turn the LibraryBook in to a string representation.
 
 So we are going to add a lambda to handle the printing.
 
-Let's start by just printing the title:
+Let's change the `Approvals::verify` line. We will start by just printing the title:
 
 <!-- snippet: printable_object_simple -->
 <a id='snippet-printable_object_simple'></a>
@@ -214,7 +224,7 @@ isbn: 978-0439139595
 <sup><a href='/tests/DocTest_Tests/docs/approval_tests/Tutorial.WritableBooks2.approved.txt#L1-L7' title='Snippet source file'>snippet source</a> | <a href='#snippet-Tutorial.WritableBooks2.approved.txt' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
-If you would like to know how to do this more robustly, check out [To String](/doc/ToString.md#top).
+**Bonus Material:** If you would like to know how to do this more robustly, check out [To String](/doc/ToString.md#top).
 
 ## Dealing with test failures
 

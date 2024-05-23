@@ -17,7 +17,7 @@ If you have a lot of approval files, you might want to put them in a subdirector
 auto directoryDisposer =
     ApprovalTests::Approvals::useApprovalsSubdirectory("approval_tests");
 ```
-<sup><a href='/tests/Catch2_Tests/main.cpp#L12-L15' title='Snippet source file'>snippet source</a> | <a href='#snippet-use_subdirectory_in_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/tests/Catch2_Tests/catch2_test_main.cpp#L12-L15' title='Snippet source file'>snippet source</a> | <a href='#snippet-use_subdirectory_in_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note that the sub-directory is created automatically, and that it will be inside the directory containing the source code of the test, not the current working directory of the test process.

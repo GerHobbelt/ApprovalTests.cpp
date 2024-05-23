@@ -65,7 +65,7 @@ Create a file `main.cpp` and add just the following two lines:
 #define APPROVALS_CATCH // This tells Approval Tests to provide a main() - only do this in one cpp file
 #include "ApprovalTests.hpp"
 ```
-<sup><a href='/tests/Catch2_Tests/main.cpp#L6-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-catch_2_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/tests/Catch2_Tests/catch2_test_main.cpp#L6-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-catch_2_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ### Existing Project - with CATCH_CONFIG_MAIN
@@ -92,7 +92,7 @@ You should make the following additions to your own source file that contains `m
 #define APPROVALS_CATCH_EXISTING_MAIN
 #include "ApprovalTests.hpp"
 ```
-<sup><a href='/examples/catch2_existing_main/main.cpp#L1-L5' title='Snippet source file'>snippet source</a> | <a href='#snippet-catch_existing_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/examples/catch2_existing_main/catch2_exist_main.cpp#L1-L5' title='Snippet source file'>snippet source</a> | <a href='#snippet-catch_existing_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## Code to copy for your first Catch2 Approvals test

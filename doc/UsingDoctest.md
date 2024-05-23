@@ -50,7 +50,7 @@ Create a file `main.cpp` and add just the following two lines:
 #define APPROVALS_DOCTEST // This tells Approval Tests to provide a main() - only do this in one cpp file
 #include "ApprovalTests.hpp"
 ```
-<sup><a href='/tests/DocTest_Tests/main.cpp#L1-L5' title='Snippet source file'>snippet source</a> | <a href='#snippet-doctest_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/tests/DocTest_Tests/doctest_main.cpp#L1-L5' title='Snippet source file'>snippet source</a> | <a href='#snippet-doctest_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 <!-- todo: document use of sections -->
@@ -68,7 +68,7 @@ You should make the following additions to your own source file that contains `m
 #define APPROVALS_DOCTEST_EXISTING_MAIN
 #include "ApprovalTests.hpp"
 ```
-<sup><a href='/examples/doctest_existing_main/main.cpp#L1-L5' title='Snippet source file'>snippet source</a> | <a href='#snippet-doctest_existing_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/examples/doctest_existing_main/doctest_exist_main.cpp#L1-L5' title='Snippet source file'>snippet source</a> | <a href='#snippet-doctest_existing_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## Code to copy for your first doctest Approvals test

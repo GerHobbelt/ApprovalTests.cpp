@@ -97,7 +97,7 @@ This is an example what the new code would look like:
 using namespace ApprovalTests;
 Approvals::verify("text to be verified", Options(Windows::AraxisMergeReporter()));
 ```
-<sup><a href='/examples/googletest_existing_main/GoogleTestApprovalsTests.cpp#L13-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-basic_approval_with_reporter' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/examples/googletest_existing_main/GoogleTestExistApprovalsTests.cpp#L13-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-basic_approval_with_reporter' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ### Updating verifyWithExtension(..., fileExtensionWithDot, Reporter)

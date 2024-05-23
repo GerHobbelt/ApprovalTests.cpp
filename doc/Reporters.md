@@ -96,7 +96,7 @@ At present, the default Reporter is the DiffReporter. Whenever you call Approval
 auto defaultReporterDisposer = ApprovalTests::Approvals::useAsDefaultReporter(
     std::make_shared<ApprovalTests::DiffReporter>());
 ```
-<sup><a href='/tests/Catch2_Tests/main.cpp#L17-L22' title='Snippet source file'>snippet source</a> | <a href='#snippet-use_as_default_reporter_in_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/tests/Catch2_Tests/catch2_test_main.cpp#L17-L22' title='Snippet source file'>snippet source</a> | <a href='#snippet-use_as_default_reporter_in_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 The return value is ["Disposable"](/doc/DisposableObjects.md#top), meaning it will restore the original reporter when the object destructs. Because of this, if you do not store the result in a variable, it will immediately undo itself by the end of the line.
@@ -118,7 +118,7 @@ Here is an example of not launching any reporters if you are on a machine with a
 auto frontLoadedReportDisposer = ApprovalTests::Approvals::useAsFrontLoadedReporter(
     ApprovalTests::BlockingReporter::onMachineNamed("MyCIMachineName"));
 ```
-<sup><a href='/examples/googletest_existing_main/main.cpp#L19-L23' title='Snippet source file'>snippet source</a> | <a href='#snippet-do_not_report_on_named_machine' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/examples/googletest_existing_main/googletest_exist_main.cpp#L19-L23' title='Snippet source file'>snippet source</a> | <a href='#snippet-do_not_report_on_named_machine' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Once you have added that, even calling approvals with a specific Reporter will not launch it on the CI system (but will for all other systems). For example:
@@ -129,7 +129,7 @@ Once you have added that, even calling approvals with a specific Reporter will n
 using namespace ApprovalTests;
 Approvals::verify("text to be verified", Options(Windows::AraxisMergeReporter()));
 ```
-<sup><a href='/examples/googletest_existing_main/GoogleTestApprovalsTests.cpp#L13-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-basic_approval_with_reporter' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/examples/googletest_existing_main/GoogleTestExistApprovalsTests.cpp#L13-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-basic_approval_with_reporter' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ### Blocking Reporters
@@ -143,7 +143,7 @@ Blocking reporters are a simple class, designed for use with FrontLoadedReporter
 auto frontLoadedReportDisposer = ApprovalTests::Approvals::useAsFrontLoadedReporter(
     ApprovalTests::BlockingReporter::onMachineNamed("MyCIMachineName"));
 ```
-<sup><a href='/examples/googletest_existing_main/main.cpp#L19-L23' title='Snippet source file'>snippet source</a> | <a href='#snippet-do_not_report_on_named_machine' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/examples/googletest_existing_main/googletest_exist_main.cpp#L19-L23' title='Snippet source file'>snippet source</a> | <a href='#snippet-do_not_report_on_named_machine' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## Miscellaneous Helper Reporters

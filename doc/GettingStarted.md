@@ -34,7 +34,7 @@ For Catch2, it's these two lines:
 #define APPROVALS_CATCH // This tells Approval Tests to provide a main() - only do this in one cpp file
 #include "ApprovalTests.hpp"
 ```
-<sup><a href='/tests/Catch2_Tests/main.cpp#L6-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-catch_2_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/tests/Catch2_Tests/catch2_test_main.cpp#L6-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-catch_2_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 For all other test files, you need:

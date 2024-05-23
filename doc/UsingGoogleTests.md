@@ -51,7 +51,7 @@ Create a file `main.cpp` and add just the following two lines:
 #define APPROVALS_GOOGLETEST // This tells Approval Tests to provide a main() - only do this in one cpp file
 #include "ApprovalTests.hpp"
 ```
-<sup><a href='/tests/GoogleTest_Tests/main.cpp#L2-L6' title='Snippet source file'>snippet source</a> | <a href='#snippet-googletest_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/tests/GoogleTest_Tests/googletest_main.cpp#L2-L6' title='Snippet source file'>snippet source</a> | <a href='#snippet-googletest_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ### Existing Project - no main()
@@ -87,7 +87,7 @@ int main(int argc, char** argv)
     return RUN_ALL_TESTS();
 }
 ```
-<sup><a href='/examples/googletest_existing_main/main.cpp#L1-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-googletest_existing_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/examples/googletest_existing_main/googletest_exist_main.cpp#L1-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-googletest_existing_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## Customizing Google Tests Approval File Names

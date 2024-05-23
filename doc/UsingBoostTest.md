@@ -41,7 +41,7 @@ after the boost headers:
 #define APPROVALS_BOOSTTEST
 #include "ApprovalTests.hpp"
 ```
-<sup><a href='/tests/Boost_Tests/main.cpp#L8-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-boost_test_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/tests/Boost_Tests/boost_test_main.cpp#L8-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-boost_test_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 #### Understanding Boost.Test Entry points
@@ -54,7 +54,7 @@ The entry point is any file that will contain the line:
 ```cpp
 #define BOOST_TEST_MODULE ModuleName
 ```
-<sup><a href='/tests/Boost_Tests/main.cpp#L1-L3' title='Snippet source file'>snippet source</a> | <a href='#snippet-boost_test_entry_point' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/tests/Boost_Tests/boost_test_main.cpp#L1-L3' title='Snippet source file'>snippet source</a> | <a href='#snippet-boost_test_entry_point' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## Code to copy for your first Boost.Test Approvals test

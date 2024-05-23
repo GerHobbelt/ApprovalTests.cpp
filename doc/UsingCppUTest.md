@@ -73,7 +73,7 @@ Create a file `main.cpp` and add just the following two lines:
 #define APPROVALS_CPPUTEST
 #include "ApprovalTests.hpp"
 ```
-<sup><a href='/tests/CppUTest_Tests/main.cpp#L1-L4' title='Snippet source file'>snippet source</a> | <a href='#snippet-cpputest_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/tests/CppUTest_Tests/cputest_main.cpp#L1-L4' title='Snippet source file'>snippet source</a> | <a href='#snippet-cpputest_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ### Existing Project - with your main()
@@ -102,7 +102,7 @@ int main(int argc, char** argv)
     return result;
 }
 ```
-<sup><a href='/examples/cpputest_existing_main/main.cpp#L1-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-cpputest_existing_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/examples/cpputest_existing_main/cpputest_exist_main.cpp#L1-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-cpputest_existing_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## Code to copy for your first CppUTest Approvals test

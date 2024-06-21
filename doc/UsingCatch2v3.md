@@ -57,7 +57,7 @@ Create a file `main.cpp` and add just the following two lines:
 #define APPROVALS_CATCH2_V3 // This tells Approval Tests to provide a main() - only do this in one cpp file
 #include "ApprovalTests.hpp"
 ```
-<sup><a href='/tests/Catch2v3_Tests/main.cpp#L4-L8' title='Snippet source file'>snippet source</a> | <a href='#snippet-catch_2_v3_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/tests/Catch2v3_Tests/catch2v3_test_main.cpp#L4-L8' title='Snippet source file'>snippet source</a> | <a href='#snippet-catch_2_v3_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 <!-- todo: document use of sections -->

@@ -7,7 +7,12 @@
 
 #include <iostream>
 
-int main(int argc, char* argv[])
+#if defined(BUILD_MONOLITHIC)
+#define main approval_catch2_v3_existing_main
+#endif
+
+extern "C"
+int main(int argc, const char** argv)
 {
     std::cout << "macros defined:\n";
 #ifdef _WIN32

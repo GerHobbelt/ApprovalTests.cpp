@@ -5,7 +5,7 @@
 
 #include "tests/DocTest_Tests/reporters/FakeReporter.h"
 
-int main()
+int main(void)
 {
     using namespace boost::ut;
 

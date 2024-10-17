@@ -102,7 +102,7 @@ Here is sample code to create your `main()` function and your first test, to set
 #define APPROVALS_UT
 #include "ApprovalTests.hpp"
 
-int main()
+int main(void)
 {
     using namespace boost::ut;
     using namespace ApprovalTests;

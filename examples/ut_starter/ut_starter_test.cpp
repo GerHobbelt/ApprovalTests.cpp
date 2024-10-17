@@ -1,7 +1,7 @@
 #define APPROVALS_UT
 #include "ApprovalTests.hpp"
 
-int main()
+int main(void)
 {
     using namespace boost::ut;
     using namespace ApprovalTests;

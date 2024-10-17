@@ -5,7 +5,12 @@
 #define APPROVALS_GOOGLETEST_EXISTING_MAIN
 #include "ApprovalTests.hpp"
 
-int main(int argc, char** argv)
+#if defined(BUILD_MONOLITHIC)
+#define main approval_googletest_exist_main
+#endif
+
+extern "C"
+int main(int argc, const char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
 

@@ -6,7 +6,12 @@
 
 #include "ApprovalTests/Approvals.h"
 
-int main(int argc, char** argv)
+#if defined(BUILD_MONOLITHIC)
+#define main approval_doctest_exist_main
+#endif
+
+extern "C"
+int main(int argc, const char** argv)
 {
     auto directoryDisposer =
         ApprovalTests::Approvals::useApprovalsSubdirectory("approval_tests");

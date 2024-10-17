@@ -5,7 +5,12 @@
 #define APPROVALS_CPPUTEST_EXISTING_MAIN
 #include "ApprovalTests.hpp"
 
-int main(int argc, char** argv)
+#if defined(BUILD_MONOLITHIC)
+#define main approval_cputest_exist_main
+#endif
+
+extern "C"
+int main(int argc, const char** argv)
 {
     // 2. Add this line to your main:
     ApprovalTests::initializeApprovalTestsForCppUTest();

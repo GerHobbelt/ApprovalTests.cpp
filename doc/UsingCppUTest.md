@@ -92,7 +92,7 @@ Instead, you should make the following additions to your own source file that co
 #define APPROVALS_CPPUTEST_EXISTING_MAIN
 #include "ApprovalTests.hpp"
 
-int main(int argc, char** argv)
+int main(int argc, const char** argv)
 {
     // 2. Add this line to your main:
     ApprovalTests::initializeApprovalTestsForCppUTest();

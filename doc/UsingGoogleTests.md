@@ -77,7 +77,7 @@ Instead, you should make the following additions to your own source file that co
 #define APPROVALS_GOOGLETEST_EXISTING_MAIN
 #include "ApprovalTests.hpp"
 
-int main(int argc, char** argv)
+int main(int argc, const char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
 

@@ -6,7 +6,7 @@
 // http://www.boost.org/LICENSE_1_0.txt)
 //
 //git version: 8e00f72e9e008d8e5b6c3c1a0c52f13a06e6b1fa
-#if defined(__cpp_modules)
+#if defined(__cpp_modules) && !defined(_MSC_VER)
 export module boost.ut;
 export import std;
 #else
@@ -84,7 +84,7 @@ auto operator>=(TLhs, TRhs) -> bool;
 #endif
 #endif
 
-#if defined(__cpp_modules)
+#if defined(__cpp_modules) && !defined(_MSC_VER)
 export namespace boost::inline ext::ut {
 #else
 namespace boost {

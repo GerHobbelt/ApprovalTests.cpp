@@ -6,9 +6,11 @@
 #ifdef APPROVALS_UT
 #define APPROVAL_TESTS_INCLUDE_CPPS
 
+#if defined(__GNUC__) || defined(__clang_major__)
 #if !(__GNUC__ >= 9 or __clang_major__ >= 9)
 #error                                                                                   \
     "The [Boost].UT integration with Approval Tests requires source_location support by the compiler"
+#endif
 #endif
 
 // begin-snippet: required_header_for_ut

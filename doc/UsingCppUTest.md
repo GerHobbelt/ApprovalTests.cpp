@@ -92,7 +92,11 @@ Instead, you should make the following additions to your own source file that co
 #define APPROVALS_CPPUTEST_EXISTING_MAIN
 #include "ApprovalTests.hpp"
 
-int main(int argc, const char** argv)
+#if defined(BUILD_MONOLITHIC)
+#define main approval_cputest_exist_main
+#endif
+
+extern "C" int main(int argc, const char** argv)
 {
     // 2. Add this line to your main:
     ApprovalTests::initializeApprovalTestsForCppUTest();
@@ -102,7 +106,7 @@ int main(int argc, const char** argv)
     return result;
 }
 ```
-<sup><a href='/examples/cpputest_existing_main/cpputest_exist_main.cpp#L1-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-cpputest_existing_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/examples/cpputest_existing_main/cpputest_exist_main.cpp#L1-L21' title='Snippet source file'>snippet source</a> | <a href='#snippet-cpputest_existing_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## Code to copy for your first CppUTest Approvals test

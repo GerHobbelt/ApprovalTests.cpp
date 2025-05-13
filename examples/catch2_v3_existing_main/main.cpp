@@ -11,8 +11,7 @@
 #define main approval_catch2_v3_existing_main
 #endif
 
-extern "C"
-int main(int argc, const char** argv)
+extern "C" int main(int argc, const char** argv)
 {
     std::cout << "macros defined:\n";
 #ifdef _WIN32

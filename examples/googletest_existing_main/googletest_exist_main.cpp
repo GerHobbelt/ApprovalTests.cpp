@@ -9,8 +9,7 @@
 #define main approval_googletest_exist_main
 #endif
 
-extern "C"
-int main(int argc, const char** argv)
+extern "C" int main(int argc, const char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
 

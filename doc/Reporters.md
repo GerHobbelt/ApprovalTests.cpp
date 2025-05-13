@@ -118,7 +118,7 @@ Here is an example of not launching any reporters if you are on a machine with a
 auto frontLoadedReportDisposer = ApprovalTests::Approvals::useAsFrontLoadedReporter(
     ApprovalTests::BlockingReporter::onMachineNamed("MyCIMachineName"));
 ```
-<sup><a href='/examples/googletest_existing_main/googletest_exist_main.cpp#L19-L23' title='Snippet source file'>snippet source</a> | <a href='#snippet-do_not_report_on_named_machine' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/examples/googletest_existing_main/googletest_exist_main.cpp#L23-L27' title='Snippet source file'>snippet source</a> | <a href='#snippet-do_not_report_on_named_machine' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Once you have added that, even calling approvals with a specific Reporter will not launch it on the CI system (but will for all other systems). For example:
@@ -143,7 +143,7 @@ Blocking reporters are a simple class, designed for use with FrontLoadedReporter
 auto frontLoadedReportDisposer = ApprovalTests::Approvals::useAsFrontLoadedReporter(
     ApprovalTests::BlockingReporter::onMachineNamed("MyCIMachineName"));
 ```
-<sup><a href='/examples/googletest_existing_main/googletest_exist_main.cpp#L19-L23' title='Snippet source file'>snippet source</a> | <a href='#snippet-do_not_report_on_named_machine' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/examples/googletest_existing_main/googletest_exist_main.cpp#L23-L27' title='Snippet source file'>snippet source</a> | <a href='#snippet-do_not_report_on_named_machine' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## Miscellaneous Helper Reporters

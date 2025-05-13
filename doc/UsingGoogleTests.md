@@ -77,7 +77,11 @@ Instead, you should make the following additions to your own source file that co
 #define APPROVALS_GOOGLETEST_EXISTING_MAIN
 #include "ApprovalTests.hpp"
 
-int main(int argc, const char** argv)
+#if defined(BUILD_MONOLITHIC)
+#define main approval_googletest_exist_main
+#endif
+
+extern "C" int main(int argc, const char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
 
@@ -87,7 +91,7 @@ int main(int argc, const char** argv)
     return RUN_ALL_TESTS();
 }
 ```
-<sup><a href='/examples/googletest_existing_main/googletest_exist_main.cpp#L1-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-googletest_existing_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/examples/googletest_existing_main/googletest_exist_main.cpp#L1-L21' title='Snippet source file'>snippet source</a> | <a href='#snippet-googletest_existing_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## Customizing Google Tests Approval File Names

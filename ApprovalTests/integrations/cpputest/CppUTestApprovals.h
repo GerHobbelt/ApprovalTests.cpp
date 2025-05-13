@@ -73,8 +73,7 @@ namespace ApprovalTests
 }
 
 #ifndef APPROVALS_CPPUTEST_EXISTING_MAIN
-extern "C"
-int main(int argc, const char** argv)
+extern "C" int main(int argc, const char** argv)
 {
     ApprovalTests::initializeApprovalTestsForCppUTest();
 

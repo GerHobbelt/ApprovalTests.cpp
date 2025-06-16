@@ -104,7 +104,7 @@ You should make the following additions to your own source file that contains `m
 #include "ApprovalTests.hpp"
 #include <catch2/catch_session.hpp>
 ```
-<sup><a href='/examples/catch2_v3_existing_main/main.cpp#L1-L6' title='Snippet source file'>snippet source</a> | <a href='#snippet-catch2_v3_existing_main' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/examples/catch2_v3_existing_main/catch2_v3_exist_main.cpp#L1-L6' title='Snippet source file'>snippet source</a> | <a href='#snippet-catch2_v3_existing_main' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 Note: We think that using your own `main()` like this may not work with Catch2 amalgamated releases.

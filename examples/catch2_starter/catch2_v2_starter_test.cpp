@@ -1,7 +1,7 @@
 #include "catch2/catch.hpp"
 #include "ApprovalTests.hpp"
 
-TEST_CASE("catch2_starter sample")
+CATCH_TEST_CASE("catch2_starter sample")
 {
     // TODO Replace 42 with the value or object whose contents you are verifying.
     // For help, see:

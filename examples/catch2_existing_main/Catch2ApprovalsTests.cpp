@@ -3,7 +3,7 @@
 
 using namespace ApprovalTests;
 
-TEST_CASE("TestStreamableObject")
+CATCH_TEST_CASE("TestStreamableObject")
 {
     Approvals::verify(42);
 }

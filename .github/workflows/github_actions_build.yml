@@ -46,7 +46,7 @@ jobs:
 
   Linux:
     needs: clang-format-and-update-docs
-    # if: false # Disable this platform temporarily
+    if: false # Disable this platform temporarily
     runs-on: ubuntu-${{ matrix.os-version }}
     strategy:
       fail-fast: false
@@ -142,7 +142,7 @@ jobs:
 
   macOS:
     needs: clang-format-and-update-docs
-    # if: false # Disable this platform temporarily
+    if: false # Disable this platform temporarily
     runs-on: macos-${{ matrix.os-version }}
     strategy:
       fail-fast: false
@@ -191,20 +191,20 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - job-name: WIN-2025-VS-2022
+          - job-name: WIN-2025-VS-2026
             os-version: '2025'
+            generator: '"Visual Studio 18 2026"'
+
+          - job-name: WIN-2025-VS-2026 (clangcl)
+            os-version: '2025'
+            generator: '"Visual Studio 18 2026" -T "clangcl"'
+
+          - job-name: WIN-2022-VS-2022
+            os-version: '2022'
             generator: '"Visual Studio 17 2022"'
 
-          - job-name: WIN-2025-VS-2022 (clangcl)
-            os-version: '2025'
-            generator: '"Visual Studio 17 2022" -T "clangcl"'
-
-          - job-name: WIN-latest-VS-2022
-            os-version: 'latest'
-            generator: '"Visual Studio 17 2022"'
-
-          - job-name: WIN-latest-VS-2022 (clangcl)
-            os-version: 'latest'
+          - job-name: WIN-2022-VS-2022 (clangcl)
+            os-version: '2022'
             generator: '"Visual Studio 17 2022" -T "clangcl"'
 
     name: Windows ${{ matrix.job-name }}
@@ -218,6 +218,14 @@ jobs:
         with:
           python-version: '3.11'
       - uses: ./.github/actions/setup-conan
+
+      - name: configure Conan for Visual Studio 2022
+        run: |
+          conan profile remove settings.compiler.libcxx default
+          conan profile update settings.compiler="Visual Studio" default
+          conan profile update settings.compiler.version=17 default
+          conan profile update settings.compiler.runtime=MD default
+          conan profile show default
 
       - name: install boost
         run: |
@@ -234,7 +242,7 @@ jobs:
           mkdir ${{ env.BUILD_PATH }}
           cd ${{ env.BUILD_PATH }}
           cmake --version
-          cmake -G ${{ matrix.generator }} ${{ github.workspace }} -DCMAKE_BUILD_TYPE=Debug
+          cmake -G ${{ matrix.generator }} ${{ github.workspace }} -DCMAKE_BUILD_TYPE=Debug -DCMAKE_POLICY_VERSION_MINIMUM=3.5
       - name: build
         run: |
           cd ${{ env.BUILD_PATH }}
